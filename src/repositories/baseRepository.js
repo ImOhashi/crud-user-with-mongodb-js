@@ -51,7 +51,7 @@ export default class BaseRepository {
    * @returns {object}
    */
   async update(id, model) {
-    return this.model.findByIdAndUpdate(id, model);
+    return this.model.findOneAndUpdate(id, model);
   }
 
   /**
@@ -62,6 +62,6 @@ export default class BaseRepository {
    * @returns {object}
    */
   async deleteUser(id) {
-    return this.model.findByIdAndDelete({ _id: id });
+    return this.model.findOneAndDelete({ _id: id });
   }
 }

@@ -13,7 +13,8 @@ class UserRouter {
     this.router
       .get("/", userController.getMany)
       .get("/:id", userController.get)
-      .post("/", userController.create);
+      .post("/", userController.create)
+      .put("/:id", userController.update)
   }
 }
 

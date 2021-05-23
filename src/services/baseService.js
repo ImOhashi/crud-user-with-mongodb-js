@@ -16,8 +16,8 @@ export default class BaseService {
    * @param {string} id
    * @returns {object}
    */
-  async get(_id) {
-    return this.repository.get({_id: mongoose.Types.ObjectId(_id)});
+  async get(id) {
+    return this.repository.get({_id: mongoose.Types.ObjectId(id)});
   }
 
   /**
