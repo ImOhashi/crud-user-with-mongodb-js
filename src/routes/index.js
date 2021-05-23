@@ -1,10 +1,10 @@
 import express from "express";
 
 class Router {
-
-    /**
-     * @constructor
-     */
+  
+  /**
+   * @constructor
+   */
   constructor() {
     this.router = express.Router();
 
@@ -13,7 +13,7 @@ class Router {
 
   /**
    * Set all routes
-   * 
+   *
    * @memberof Router
    * @method setRoutes
    * @return {void}
