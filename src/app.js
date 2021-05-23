@@ -4,12 +4,23 @@ import router from "./routes/index.js";
 import { morganMiddleware } from "./utils/index.js";
 
 class App {
+
+  /**
+   * @constructor
+   */
   constructor() {
     this.app = express();
 
     this.middlewares();
   }
 
+  /**
+   * Set all middlewares of server
+   * 
+   * @memberof App
+   * @method middlewares
+   * @returns {void}
+   */
   middlewares() {
     this.app.use(morganMiddleware);
     this.app.use(express.json({ limit: "50mb" }));

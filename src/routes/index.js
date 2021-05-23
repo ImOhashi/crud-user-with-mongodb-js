@@ -1,12 +1,23 @@
 import express from "express";
 
 class Router {
+
+    /**
+     * @constructor
+     */
   constructor() {
     this.router = express.Router();
 
     this.setRoutes();
   }
 
+  /**
+   * Set all routes
+   * 
+   * @memberof Router
+   * @method setRoutes
+   * @return {void}
+   */
   setRoutes() {
     this.router.use("/details", (req, res) => {
       res.status(200).json({
