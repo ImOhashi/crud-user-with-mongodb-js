@@ -1,7 +1,7 @@
 export default class BaseService {
   /**
    * @constructor
-   * @param {Repository} repository 
+   * @param {Repository} repository
    */
   constructor(repository) {
     this.repository = repository;
@@ -9,7 +9,7 @@ export default class BaseService {
 
   /**
    * Get document
-   * 
+   *
    * @memberof BaseRepository
    * @param {string} id
    * @returns {object}
@@ -20,9 +20,9 @@ export default class BaseService {
 
   /**
    * Get an array of documents
-   * 
+   *
    * @memberof BaseRepository
-   * @param {[string]} ids 
+   * @param {[string]} ids
    * @returns {[object]}
    */
   async getMany(ids) {
@@ -31,9 +31,9 @@ export default class BaseService {
 
   /**
    * Create document
-   * 
+   *
    * @memberof BaseRepository
-   * @param {object} model 
+   * @param {object} model
    * @returns {object}
    */
   async create(model) {
@@ -42,10 +42,10 @@ export default class BaseService {
 
   /**
    * Update document
-   * 
+   *
    * @memberof BaseRepository
-   * @param {string} id 
-   * @param {object} model 
+   * @param {string} id
+   * @param {object} model
    * @returns {object}
    */
   async update(id, model) {
@@ -54,9 +54,9 @@ export default class BaseService {
 
   /**
    * Delete document
-   * 
+   *
    * @memberof BaseRepository
-   * @param {string} id 
+   * @param {string} id
    * @returns {object}
    */
   async delete(id) {

@@ -1,7 +1,7 @@
 import BaseService from "./baseService.js";
 import UserRepository from "./../repositories/userRepository.js";
 
-export default class UserService extends BaseService {
+class UserService extends BaseService {
   /**
    * @constructor
    */
@@ -9,3 +9,5 @@ export default class UserService extends BaseService {
     super(UserRepository);
   }
 }
+
+export default new UserService();

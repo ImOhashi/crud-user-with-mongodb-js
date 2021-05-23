@@ -1,7 +1,7 @@
 import BaseRepository from "./baseRepository.js";
 import UserModel from "../models/User.js";
 
-export default class UserRepository extends BaseRepository {
+class UserRepository extends BaseRepository {
   /**
    * @constructor
    */
@@ -9,3 +9,5 @@ export default class UserRepository extends BaseRepository {
     super(UserModel);
   }
 }
+
+export default new UserRepository();

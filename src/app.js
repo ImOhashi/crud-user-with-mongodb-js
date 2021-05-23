@@ -1,16 +1,22 @@
 import express from "express";
+import dotenv from "dotenv";
 
 import router from "./routes/index.js";
 import { morganMiddleware } from "./utils/index.js";
+import database from "./database/connect.js";
 
 class App {
   /**
    * @constructor
    */
   constructor() {
+    dotenv.config();
+    
     this.app = express();
-
+    
     this.middlewares();
+    
+    database.connect();
   }
 
   /**

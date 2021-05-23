@@ -6,7 +6,7 @@ import { DatabaseError } from "../error/index.js";
 class Connect {
   /**
    * Connection method
-   * 
+   *
    * @memberof Connect
    * @method connect
    * @returns {void}
@@ -23,7 +23,6 @@ class Connect {
       },
       (err) => {
         if (err) {
-          Logger.error(err);
           throw new DatabaseError(err);
         } else {
           Logger.info("Database is connected");
