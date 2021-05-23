@@ -1,5 +1,5 @@
 import BaseRepository from "./base.js";
-import UserModel from "./../models/User";
+import UserModel from "../models/User";
 
 export default class UserRepository extends BaseRepository {
   /**
