@@ -53,7 +53,7 @@ export default class BaseRepository {
    * @param {object} model 
    * @returns 
    */
-  async updateUser(id, model) {
+  async update(id, model) {
     return this.model.findByIdAndUpdate(id, model);
   }
 
