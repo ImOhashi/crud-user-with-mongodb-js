@@ -22,7 +22,7 @@ class UserController {
   async create(req, res) {
     try {
       const result = await userService.create(req.body);
-      return res.status(200).json(result);
+      return res.status(201).json(result);
     } catch (err) {
       throw new Error(err);
     }
@@ -31,9 +31,18 @@ class UserController {
   async update(req, res) {
     try {
       const result = await userService.update(req.params.id, req.body);
-      return res.status(200).json(result);
+      return res.status(202).json(result);
     } catch (err) {
       throw new Error(err);
+    }
+  }
+
+  async delete(req, res) {
+    try {
+      const result = await userService.delete(req.params.id);
+      return res.status(202).json(result);
+    } catch(err) {
+      throw new Error(err)
     }
   }
 }

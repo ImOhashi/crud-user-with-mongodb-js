@@ -15,6 +15,7 @@ class UserRouter {
       .get("/:id", userController.get)
       .post("/", userController.create)
       .put("/:id", userController.update)
+      .delete("/:id", userController.delete);
   }
 }
 

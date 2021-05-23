@@ -61,7 +61,7 @@ export default class BaseRepository {
    * @param {string} id 
    * @returns {object}
    */
-  async deleteUser(id) {
+  async delete(id) {
     return this.model.findOneAndDelete({ _id: id });
   }
 }
