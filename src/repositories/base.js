@@ -1,6 +1,7 @@
 export default class BaseRepository {
   /**
    * @constructor
+   * @param {Model} model
    */
   constructor(model) {
     this.model = model;
@@ -51,7 +52,7 @@ export default class BaseRepository {
    * @memberof BaseRepository
    * @param {string} id 
    * @param {object} model 
-   * @returns 
+   * @returns {object}
    */
   async update(id, model) {
     return this.model.findByIdAndUpdate(id, model);
