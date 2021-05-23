@@ -4,7 +4,6 @@ import router from "./routes/index.js";
 import { morganMiddleware } from "./utils/index.js";
 
 class App {
-
   /**
    * @constructor
    */
@@ -16,7 +15,7 @@ class App {
 
   /**
    * Set all middlewares of server
-   * 
+   *
    * @memberof App
    * @method middlewares
    * @returns {void}

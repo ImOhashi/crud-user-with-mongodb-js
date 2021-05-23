@@ -33,33 +33,33 @@ export default class BaseService {
    * Create document
    * 
    * @memberof BaseRepository
-   * @param {object} user 
+   * @param {object} model 
    * @returns {object}
    */
-  async create(user) {
-    return this.repository.create(user);
+  async create(model) {
+    return this.repository.create(model);
   }
 
   /**
    * Update document
    * 
    * @memberof BaseRepository
-   * @param {string} userId 
-   * @param {object} user 
+   * @param {string} id 
+   * @param {object} model 
    * @returns {object}
    */
-  async update(userId, user) {
-    return this.repository.update(userId, user);
+  async update(id, model) {
+    return this.repository.update(id, model);
   }
 
   /**
    * Delete document
    * 
    * @memberof BaseRepository
-   * @param {string} userId 
+   * @param {string} id 
    * @returns {object}
    */
-  async delete(userId) {
-    return this.repository.delete(userId);
+  async delete(id) {
+    return this.repository.delete(id);
   }
 }
