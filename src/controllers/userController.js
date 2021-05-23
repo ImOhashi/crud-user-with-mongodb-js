@@ -10,6 +10,15 @@ class UserController {
     }
   }
 
+  async getMany(req, res) {
+    try {
+      const result = await userService.getMany()
+      return res.status(200).json(result);
+    } catch(err) {
+      throw new Error(err)
+    }
+  }
+
   async create(req, res) {
     try {
       const result = await userService.create(req.body);

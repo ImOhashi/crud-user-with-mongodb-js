@@ -27,12 +27,8 @@ export default class BaseRepository {
    * @param {[string]} ids
    * @returns {[object]}
    */
-  async getMany(ids) {
-    return this.model.find({
-      _id: {
-        $in: ids,
-      },
-    });
+  async getMany() {
+    return this.model.find();
   }
 
   /**

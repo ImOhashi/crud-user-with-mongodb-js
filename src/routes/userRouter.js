@@ -11,6 +11,7 @@ class UserRouter {
 
   setRoutes() {
     this.router
+      .get("/", userController.getMany)
       .get("/:id", userController.get)
       .post("/", userController.create);
   }

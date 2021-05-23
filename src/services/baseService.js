@@ -27,8 +27,8 @@ export default class BaseService {
    * @param {[string]} ids
    * @returns {[object]}
    */
-  async getMany(ids) {
-    return this.repository.getMany(ids);
+  async getMany() {
+    return this.repository.getMany();
   }
 
   /**
