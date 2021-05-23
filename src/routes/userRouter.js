@@ -10,7 +10,9 @@ class UserRouter {
   }
 
   setRoutes() {
-    this.router.post("/", userController.create);
+    this.router
+      .get("/:id", userController.get)
+      .post("/", userController.create);
   }
 }
 

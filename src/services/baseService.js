@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 export default class BaseService {
   /**
    * @constructor
@@ -14,8 +16,8 @@ export default class BaseService {
    * @param {string} id
    * @returns {object}
    */
-  async get(id) {
-    return this.repository.get(id);
+  async get(_id) {
+    return this.repository.get({_id: mongoose.Types.ObjectId(_id)});
   }
 
   /**
