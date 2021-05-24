@@ -33,9 +33,9 @@ export default class BaseRepository {
 
   /**
    * Create a document
-   * 
+   *
    * @memberof BaseRepository
-   * @param {object} model 
+   * @param {object} model
    * @returns {object}
    */
   async create(model) {
@@ -44,21 +44,25 @@ export default class BaseRepository {
 
   /**
    * Update a document
-   * 
+   *
    * @memberof BaseRepository
-   * @param {string} id 
-   * @param {object} model 
+   * @param {string} id
+   * @param {object} model
    * @returns {object}
    */
   async update(id, model) {
-    return this.model.findOneAndUpdate(id, model);
+    return this.model.findOneAndUpdate(
+      { _id: id },
+      { $set: model },
+      { new: true, returnOriginal: false }
+    );
   }
 
   /**
    * Delete a document
-   * 
+   *
    * @memberof BaseRepository
-   * @param {string} id 
+   * @param {string} id
    * @returns {object}
    */
   async delete(id) {
